@@ -1,0 +1,53 @@
+<html>
+<head>
+<title>DNSManager</title>
+<script type="text/javascript" src="/ckeditor/ckeditor.js"></script>
+<script type="text/javascript">
+	
+			var http = nuevoAjax();
+
+		
+	//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+			function nuevoAjax(){ 
+				var xmlhttp=false;
+				try{
+					xmlhttp=new ActiveXObject("Msxml2.XMLHTTP");
+				}catch(e){
+					try{
+						xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+					}catch(E){
+						if (!xmlhttp && typeof XMLHttpRequest!='undefined') xmlhttp=new XMLHttpRequest();
+					};
+				};
+				return xmlhttp; 
+			};
+			
+	//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	
+			function crea_query_string(agr) {
+  				return "cuenta=" + encodeURIComponent(agr.value);
+			};
+
+		//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+			function verinfo(){
+				http.open("POST","./cgi-bin/dnsview.py", true);
+				http.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");				
+				http.send("verinfo= ");
+				http.onreadystatechange=function() {
+				if(http.readyState == 4) {
+					CKEDITOR.instances.editor.setData(http.responseText);
+				}
+				}
+			}
+</script>
+</head>
+<body  bgcolor="#FFFFFF" onload="verinfo()">
+    <DIV id="divedit" name='dedit' align="left">			
+	   <fieldset id="fedit"><legend>Delegaciones Total</legend>
+		   <textarea class="ckeditor" cols="80" id="editor" name="editor" rows="10">ejemplo </textarea>
+	   </fieldset>
+    </DIV>
+</body>
+</html>

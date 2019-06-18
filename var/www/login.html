@@ -1,0 +1,29 @@
+<!-- HTML para crear/borrar usuarios de mail en mail.jg -->
+<!-- Hecho por Pablo Adolfo Cuyeu mateman@jg.gba.gov.ar -->
+<html>
+<head>
+<title>DNSManager</title>
+<meta http-equiv="Cache-Control" content="no-cache">
+<META HTTP-EQUIV="Expires" CONTENT="0">
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<style type="text/css">
+#logeo {position:absolute;left:280px;top:100px;width:500px; height:380px; border: 0px solid #000000;}			
+</style>
+</head>
+<body bgcolor= '#CDCDCD' >
+			<DIV id="logeo" name='logeo' align="center">
+			<P><strong>Ingresar al sistema de DNSManager </strong>
+			<form action="./cgi-bin/dnsm.py" method="post">
+			<fieldset id="identification">
+			<legend>Identificaci&oacute;n</legend>
+			<TABLE ALIGN="center">
+			<TR><TH><label for="login">cuenta</label></TH><TD><input type="text" name="login" id="login" size="10" /></TD>
+			<TR><TH><label for="pwd">clave</label></TH><TD><input type="password" name="pwd" id="pwd" size="10" /></TD>
+			<TR><TH></TH><TD><input type="submit" value="Login" /></TD>
+			</TABLE>
+			</fieldset>
+			</form>
+			</DIV>
+</body>
+</html>
+<!-- Fin del documento -->

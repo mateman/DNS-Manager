@@ -1,0 +1,40 @@
+8
+
+dir
+1
+https://daemonize.svn.sourceforge.net/svnroot/daemonize/trunk/daemonize
+https://daemonize.svn.sourceforge.net/svnroot/daemonize
+
+
+
+2007-10-05T04:34:08.203484Z
+1
+jseutter
+
+
+svn:special svn:externals svn:needs-lock
+
+daemonize.py
+file
+3
+
+
+
+2008-01-19T06:49:37.000000Z
+06ac765eedb420e1a4245a043c5e68e3
+2008-01-19T06:49:57.716198Z
+3
+jseutter
+
+__init__.py
+file
+
+
+
+
+2007-10-05T04:26:15.000000Z
+7a221c798078a42c24522a849372f6d6
+2007-10-05T04:34:08.203484Z
+1
+jseutter
+

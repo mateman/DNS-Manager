@@ -1,0 +1,102 @@
+body { 
+		font: 5pt Verdana, Geneva, Arial, Helvetica, sans-serif;
+    	margin: 10 0 10 0px;
+    	text-align: center; 
+		}
+#divform {
+		position:absolute;
+		left:5px;
+		top:5px;
+		width:690px;
+		height:70px;
+		border: 0px solid #000000;
+		visibility: visible;
+		overflow: auto;		
+		}
+#divlistar {
+		position:absolute;
+		left:5px;
+		top:70px;
+		width:270px;
+		height:950px;
+		border: 0px solid #000000;
+		visibility: visible;
+		overflow: auto;		
+		}
+#divdominio {
+		position:absolute;
+		left:310px;
+		top:70px;
+		width:570px;
+		height:950px;
+		border: 0px solid #000000;
+		visibility: visible;
+		overflow: auto;		
+		}
+#divedit {
+		position:relative;
+		left:5%;
+		top:15%;
+		width:90%;
+		height:100%;
+		border: 0px solid #000000;
+		visibility: hidden;
+		overflow: auto;		
+		}
+#divzona {
+		position:absolute;
+		left:20%;
+		top:15%;
+		width:50%;
+		height:50%;
+		border: 0px solid #000000;
+		visibility: hidden;
+		overflow: auto;		
+		}
+#divcrear {
+		position:absolute;
+		left:30%;
+		top:15%;
+		width:40%;
+		height:100%;
+		border: 0px solid #000000;
+		visibility: hidden;
+		overflow: auto;		
+		}
+#divcrearalia {
+		position:absolute;
+		left:30%;
+		top:15%;
+		width:40%;
+		height:100%;
+		border: 0px solid #000000;
+		visibility: hidden;
+		overflow: auto;		
+		}
+#divb{
+		position:absolute;
+		left:28%;
+		top:15px;
+		width:65%;
+		height:10%;
+		border: 0px solid #000000;
+		visibility: hidden;
+		overflow: auto;
+		}
+#divsession {
+		position:absolute;
+		left:100px;
+		top:105px;
+		width:700px;
+		height:380px;
+		border: 0px solid #000000;
+		visibility: hidden;
+		}
+#flistar {font: 10pt Verdana, Geneva, Arial, Helvetica, sans-serif;}
+#fdominio {font: 10pt Verdana, Geneva, Arial, Helvetica, sans-serif;}
+#fedit {font: 10pt Verdana, Geneva, Arial, Helvetica, sans-serif; background: #FFFACD}
+#fzona {font: 10pt Verdana, Geneva, Arial, Helvetica, sans-serif; background: #F7F8E0}
+#fcrear {font: 10pt Verdana, Geneva, Arial, Helvetica, sans-serif; background: #F7F8E0}
+#fcrearalia {font: 10pt Verdana, Geneva, Arial, Helvetica, sans-serif; background: #F7F8E0}
+#fb {font: 10pt Verdana, Geneva, Arial, Helvetica, sans-serif; background: #2EFE2E}
+#fsession {font: 10pt Verdana, Geneva, Arial, Helvetica, sans-serif; background: #F7F8E0}

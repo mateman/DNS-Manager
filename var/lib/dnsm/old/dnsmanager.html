@@ -1,0 +1,75 @@
+<html>
+<head>
+<title>DNSManager</title>
+<script src="../funciones-ajax.js"></script>
+<script type="text/javascript" src=" ../ckeditor/ckeditor.js"></script>
+<LINK REL="stylesheet" TYPE="text/css" HREF="../divstyle.css">
+</head>
+<body  bgcolor="#CDCDCD" onload="MostrarLista()">
+	<DIV id="divform" name="dform"  align="left">
+		    <input type="hidden" id="sessionval" value="123">
+			<TABLE>
+				<TR><TH><input type="button" name="reiniciar"   id="reiniciar" value="Reiniciar DNS" onClick="ReiniciarDNS()"></TH><TD><IMG SRC="/images/info.png" ALT="Ver Delegaciones Total" align="left" onClick="verinfo();"></IMG>Armar Delegaciones Total</TD></TR>
+				<TR><TH><input type="button" name="czone"   id="crearzone" value="Crear una zona" onClick="document.getElementById('divzona').style.visibility= 'visible';"></TH><TD align="left" ><input type="button" name="cdominio"   id="creardominio" value="Crear un dominio" onClick="document.getElementById('divcrear').style.visibility= 'visible';"><input type="button" name="ccname"   id="crearcname" value="Crear un alias de dominio" onClick="document.getElementById('divcrearalia').style.visibility= 'visible';"></TD></TR>
+			</TABLE>  
+	</DIV>
+    <DIV id="divlistar" name='dlistar' align="left">
+    </DIV>
+    <DIV id="divdominio" name='ddominio' align="left">
+	   <fieldset id="fdominio">
+	   </fieldset>
+    </DIV>
+    <DIV id="divedit" name='dedit' align="left">
+	   <fieldset id="fedit">
+		   <A id='cdomi'>dominio.com.ar
+		   <FORM action="script:saveedit()">
+		   <textarea class="ckeditor" cols="80" id="editor1" name="editor1" rows="10">Esto es un ejemplo </textarea>
+	       <input type="button" name="bcerrar"   id="botcerrar" value="Cerrar" onClick="veredit(false)">
+	       <input type="button" name="bsave"   id="botsave" value="Guardar" onClick="saveedit()">
+	       </FORM>  
+	   </fieldset>
+    </DIV>
+	<DIV id="espera" name="espera" align="center">
+		 <I width="72%"><B>Cargando...</B></I>
+	</DIV>
+    <DIV id="divcrear" name='divcrear' align="left">
+	    <fieldset id="fcrear">
+	     <A>Crear un dominio</A><BR>
+	     <TABLE>
+	      <TR><TH><P ALIGN="left">Nombre de la maquina: </P></TH><TD><input type=text name="maquina" id="maquinaagregar" size=20 maxlength=85 onBlur="verifica_agregar(this);" ></TD></TR>
+	      <TR><TH><P ALIGN="left">IP:</P></TH><TD><input type=text name="ip" id="ipagregar" size=15 maxlength=15 onBlur="verificaIp(this);"></TD></TR>
+	     </TABLE>
+    	 <BR>
+	     <P><input type="button" value="Crear dominio" id="botoncreardominio" onClick="agregar();"></P>
+	    </fieldset>
+    </DIV>
+
+    <DIV id="divcrearalia" name='divcrearalia' align="left">
+	    <fieldset id="fcrearalia">
+	     <A>Crear un alias dominio</A><BR>
+	     <TABLE>
+	      <TR><TH><P ALIGN="left">Nombre del alias: </P></TH><TD><input type=text name="alias" id="alias" size=20 maxlength=28 onBlur="verifica_agregar(this);" ></TD></TR>
+	      <TR><TH><P ALIGN="left">Nombre de la maquina: </P></TH><TD><input type=text name="maquinaalias" id="maquinaalias" size=20 maxlength=85 onBlur="verifica_agregar(this);"></TD></TR>
+	     </TABLE>
+    	 <BR>
+	     <P><input type="button" value="Crear alias" id="botoncrearalias" onClick="agregarCNAME();"></P>
+	    </fieldset>
+    </DIV>
+
+    <DIV id="divzona" name='divzona' align="left">
+	<fieldset id="fzona">
+	<A>Crear una zona</A><BR>
+	<TABLE>
+	<TR><TH><P ALIGN="left">Nombre de la zona: </P></TH><TD><input type=text name='agregarzona' id='agregarzona' size=20 maxlength=85 onBlur="verifica_agregar(this)" ></TD><TD><input type="button" id="agregarDominio" value="agregar un Dominio"  onClick="agregarDominio();"></TD></TR>
+	</TABLE>
+	<BR>
+	</fieldset>
+	</DIV>
+	
+	<DIV id='divb' name='divb' align="left">
+	
+	</DIV>
+
+
+</body>
+</html>

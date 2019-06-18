@@ -1,0 +1,59 @@
+<html>
+<head>
+<title>DNSView</title>
+<script src="/funciones-dnsview.js"></script>
+<script type="text/javascript" src=" /ckeditor/ckeditor.js"></script>
+<LINK REL="stylesheet" TYPE="text/css" HREF="/dnsviewstyle.css">
+</head>
+<body  bgcolor="#CDCDCD" onload="MostrarLista()">
+	<DIV id="divform" name="dform"  align="left">
+			<TABLE>
+				<TR><TH><input type="button" name="dnsview"   id="dnsview" value="DNS-View" onClick="focoMail(false);"><input type="button" name="mail1"   id="mail1" value="Mail-1" onClick="MostrarMail('mail1.dominio.com.ar');"><input type="button" name="mail2"   id="mail2" value="Mail-2" onClick="MostrarMail('servidor.dominio.com.ar');"></TH></TR>
+				<TR><TH><input type="button" name="deltotal"   id="deltotal" value="Delegaciones Total" onClick="verinfo();"></TH><TD align="left" ><input type="button" name="teldoc"   id="teldoc" value="Telefonos Doc" onClick="MostrarTelefono();"></TD><TD><input type="button" name="plani"   id="plani" value="Planilla" onClick="MostrarPlanilla();"></TD></TR>
+			</TABLE>  
+	</DIV>
+    <DIV id="divlistar" name='dlistar' align="left">
+    </DIV>
+    <DIV id="divdominio" name='ddominio' align="left">
+	   <fieldset id="fdominio">
+		   <legend>No hay dominio elegido</legend>
+	   </fieldset>
+    </DIV>
+    <DIV id="divmail" name='dmail' align="left">
+    </DIV>
+    <DIV id="divedit" name='dedit' align="left">
+	   <fieldset id="fedit">
+		   <A id='cdomi'>dominio.com.ar</A>
+		   <FORM action="script:saveedit()">
+		   <textarea class="ckeditor" cols="80" id="editor1" name="editor1" rows="10">Esto es un ejemplo </textarea>
+	       <input type="button" name="bcerrar"   id="botcerrar" value="Cerrar" onClick="veredit('divedit',false)">
+	       </FORM>  
+	   </fieldset>
+    </DIV>
+	<DIV id="espera" name="espera" align="center">
+		 <I width="72%"><B>Cargando...</B></I>
+	</DIV>
+    <DIV id="divdoc" name='divdoc' align="left">
+	   <fieldset id="fdoc">
+		   <A>Telefonos Doc</A>
+		   <FORM action="">
+		   <textarea class="ckeditor" cols="80" id="editor2" name="editor2" rows="10">Esto es un ejemplo </textarea>
+	       <input type="button" name="bcerrar"   id="botcerrar" value="Cerrar" onClick="veredit('divdoc',false)">
+	       <input type="button" name="bsave"   id="botsave" value="Guardar" onClick="savedoc()">
+	       </FORM>  
+	   </fieldset>
+    </DIV>
+
+    <DIV id="divplani" name='divplani' align="left">
+	    <fieldset id="fplani">
+		   <A>Planilla</A>
+		   <FORM action="">
+		   <textarea class="ckeditor" cols="80" id="editor3" name="editor3" rows="10">Esto es un ejemplo </textarea>
+	       <input type="button" name="bcerrar"   id="botcerrar" value="Cerrar" onClick="veredit('divplani',false)">
+	       <input type="button" name="bsave"   id="botsave" value="Guardar" onClick="saveplani()">
+	       </FORM>  
+	   </fieldset>
+    </DIV>
+
+</body>
+</html>
